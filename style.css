@@ -6,6 +6,8 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+body{
+background-image: url("https://codehelp-image-gallery.netlify.app//images/background.svg");}
 .container {
     /* EXTRA- For background img rotation */
   background: transparent;
@@ -18,7 +20,7 @@
   padding: 20px 40px;
 }
 
-/* EXTRA- For background img rotation */
+/* EXTRA- For background img rotation 
 .container::before {
   content: "";
   background-image: url("https://codehelp-image-gallery.netlify.app//images/background.svg");
@@ -28,7 +30,7 @@
   height: 100%;
   transform: rotate(90deg) scale(1.2);
   filter: contrast(110%) saturate(120%);
-}
+}*/
 
 .container h1 {
   text-align: center;
