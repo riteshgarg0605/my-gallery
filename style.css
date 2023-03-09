@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.container {
+    /* EXTRA- For background img rotation */
+  background: transparent;
+  position: relative;
+  /*  */
+  height: 100%;
+  overflow-x: hidden;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 20px 40px;
+}
+
+/* EXTRA- For background img rotation */
+.container::before {
+  content: "";
+  background-image: url("https://codehelp-image-gallery.netlify.app//images/background.svg");
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: rotate(90deg) scale(1.2);
+  filter: contrast(110%) saturate(120%);
+}
+
+.container h1 {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 3rem;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.card {
+  width: 31.5%;
+  position: relative;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.card img {
+  width: 100%;
+  height: 100%;
+  filter: grayscale(100%);
+  box-shadow: 0 0 20px #333;
+  object-fit: cover;
+}
+.card:hover {
+  transform: scale(1.03);
+  transition: 0.5s;
+  filter: drop-shadow(0 0 10px #333);
+}
+.card:hover img {
+  filter: grayscale(0%);
+}
+.card figcaption {
+  color: white;
+  position: absolute;
+  opacity: 0;
+  bottom: 0;
+  left: 0;
+  padding: 25px;
+  width: 100%;
+  height: 20%;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.5s;
+  border-radius: 0 0 10px 10px;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+.card:hover figcaption {
+  transform: scale(1.03);
+  opacity: 1;
+}
